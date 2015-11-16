@@ -1,5 +1,9 @@
 require "srm/version"
 
 module Srm
-  # Your code goes here...
+  def is_a_hash?(object)
+    object.is_a? Hash
+  end
+
+  extend self
 end

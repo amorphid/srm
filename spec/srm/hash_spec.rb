@@ -14,4 +14,16 @@ describe Srm::Hash do
       expect(subject.has_truthy_member?(hash, :a)).to eq(false)
     end
   end
+
+  context '#is_not_empty?' do
+    it 'returns true' do
+      hash = { a: nil }
+      expect(subject.is_not_empty?(hash)).to eq(true)
+    end
+
+    it 'returns false' do
+      hash = {}
+      expect(subject.is_not_empty?(hash)).to eq(false)
+    end
+  end
 end
